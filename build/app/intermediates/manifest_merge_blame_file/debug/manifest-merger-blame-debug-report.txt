@@ -1,0 +1,134 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.projetfinalflutter"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:14:5-67
+15-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:14:22-64
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:8:1-77
+16-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:8:18-74
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:9:5-80
+17-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:9:22-77
+18    <uses-permission
+18-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:10:5-13:40
+19        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+19-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:11:9-66
+20        android:minSdkVersion="30" />
+20-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:12:9-35
+21    <uses-permission android:name="android.permission.WAKE_LOCK" />
+21-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:15:5-68
+21-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:15:22-65
+22    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+22-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:16:5-77
+22-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:16:22-74
+23    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+23-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:17:5-75
+23-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:17:22-73
+24    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+24-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:18:5-74
+24-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:18:22-72
+25    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+25-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:19:5-74
+25-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:19:22-72
+26    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+26-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:8:1-77
+26-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:8:18-74
+27    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+27-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:8:1-77
+27-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:8:18-74
+28    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+28-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:9:5-80
+28-->C:\Users\charl\StudioProjects\ProjetFinalFlutter\android\app\src\main\AndroidManifest.xml:9:22-77
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+29-->[com.google.android.exoplayer:exoplayer-core:2.18.1] C:\Users\charl\.gradle\caches\transforms-3\eed6c775712772b7adb51f80912e1f44\transformed\jetified-exoplayer-core-2.18.1\AndroidManifest.xml:24:5-79
+29-->[com.google.android.exoplayer:exoplayer-core:2.18.1] C:\Users\charl\.gradle\caches\transforms-3\eed6c775712772b7adb51f80912e1f44\transformed\jetified-exoplayer-core-2.18.1\AndroidManifest.xml:24:22-76
+30
+31    <queries>
+31-->[androidx.media2:media2-session:1.2.0] C:\Users\charl\.gradle\caches\transforms-3\401e3fa5aba30c515133839c7436fb83\transformed\jetified-media2-session-1.2.0\AndroidManifest.xml:24:5-34:15
+32        <intent>
+32-->[androidx.media2:media2-session:1.2.0] C:\Users\charl\.gradle\caches\transforms-3\401e3fa5aba30c515133839c7436fb83\transformed\jetified-media2-session-1.2.0\AndroidManifest.xml:25:9-27:18
+33            <action android:name="android.media.browse.MediaBrowserService" />
+33-->[androidx.media2:media2-session:1.2.0] C:\Users\charl\.gradle\caches\transforms-3\401e3fa5aba30c515133839c7436fb83\transformed\jetified-media2-session-1.2.0\AndroidManifest.xml:26:13-79
+33-->[androidx.media2:media2-session:1.2.0] C:\Users\charl\.gradle\caches\transforms-3\401e3fa5aba30c515133839c7436fb83\transformed\jetified-media2-session-1.2.0\AndroidManifest.xml:26:21-76
+34        </intent>
+35        <intent>
+35-->[androidx.media2:media2-session:1.2.0] C:\Users\charl\.gradle\caches\transforms-3\401e3fa5aba30c515133839c7436fb83\transformed\jetified-media2-session-1.2.0\AndroidManifest.xml:28:9-30:18
+36            <action android:name="androidx.media2.session.MediaSessionService" />
+36-->[androidx.media2:media2-session:1.2.0] C:\Users\charl\.gradle\caches\transforms-3\401e3fa5aba30c515133839c7436fb83\transformed\jetified-media2-session-1.2.0\AndroidManifest.xml:29:13-82
+36-->[androidx.media2:media2-session:1.2.0] C:\Users\charl\.gradle\caches\transforms-3\401e3fa5aba30c515133839c7436fb83\transformed\jetified-media2-session-1.2.0\AndroidManifest.xml:29:21-79
+37        </intent>
+38        <intent>
+38-->[androidx.media2:media2-session:1.2.0] C:\Users\charl\.gradle\caches\transforms-3\401e3fa5aba30c515133839c7436fb83\transformed\jetified-media2-session-1.2.0\AndroidManifest.xml:31:9-33:18
+39            <action android:name="androidx.media2.session.MediaLibraryService" />
+39-->[androidx.media2:media2-session:1.2.0] C:\Users\charl\.gradle\caches\transforms-3\401e3fa5aba30c515133839c7436fb83\transformed\jetified-media2-session-1.2.0\AndroidManifest.xml:32:13-82
+39-->[androidx.media2:media2-session:1.2.0] C:\Users\charl\.gradle\caches\transforms-3\401e3fa5aba30c515133839c7436fb83\transformed\jetified-media2-session-1.2.0\AndroidManifest.xml:32:21-79
+40        </intent>
+41    </queries>
+42
+43    <application
+44        android:name="android.app.Application"
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.7.0] C:\Users\charl\.gradle\caches\transforms-3\74ce2690f7529852b8321388684fcbb6\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+46        android:debuggable="true"
+47        android:icon="@mipmap/ic_launcher"
+48        android:label="projetfinalflutter" >
+49        <activity
+50            android:name="com.example.projetfinalflutter.MainActivity"
+51            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+52            android:exported="true"
+53            android:hardwareAccelerated="true"
+54            android:launchMode="singleTop"
+55            android:theme="@style/LaunchTheme"
+56            android:windowSoftInputMode="adjustResize" >
+57
+58            <!--
+59                 Specifies an Android theme to apply to this Activity as soon as
+60                 the Android process has started. This theme is visible to the user
+61                 while the Flutter UI initializes. After that, this theme continues
+62                 to determine the Window background behind the Flutter UI.
+63            -->
+64            <meta-data
+65                android:name="io.flutter.embedding.android.NormalTheme"
+66                android:resource="@style/NormalTheme" />
+67
+68            <intent-filter>
+69                <action android:name="android.intent.action.MAIN" />
+70
+71                <category android:name="android.intent.category.LAUNCHER" />
+72            </intent-filter>
+73        </activity>
+74        <!--
+75             Don't delete the meta-data below.
+76             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+77        -->
+78        <meta-data
+79            android:name="flutterEmbedding"
+80            android:value="2" />
+81
+82        <uses-library
+82-->[androidx.window:window:1.0.0-beta04] C:\Users\charl\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+83            android:name="androidx.window.extensions"
+83-->[androidx.window:window:1.0.0-beta04] C:\Users\charl\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+84            android:required="false" />
+84-->[androidx.window:window:1.0.0-beta04] C:\Users\charl\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+85        <uses-library
+85-->[androidx.window:window:1.0.0-beta04] C:\Users\charl\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+86            android:name="androidx.window.sidecar"
+86-->[androidx.window:window:1.0.0-beta04] C:\Users\charl\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+87            android:required="false" />
+87-->[androidx.window:window:1.0.0-beta04] C:\Users\charl\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+88    </application>
+89
+90</manifest>
