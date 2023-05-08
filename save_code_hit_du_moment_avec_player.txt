@@ -1,0 +1,105 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:just_audio/just_audio.dart';
+import 'dart:async';
+
+class Online extends StatefulWidget {
+  const Online({Key? key}) : super(key: key);
+
+  @override
+  OnlineState createState() => OnlineState();
+}
+
+class OnlineState extends State<Online> {
+  final String apiUrl =
+      'https://api.radioking.io/widget/radio/bankable-radio/track/current';
+
+  Map<String, dynamic>? currentTrack;
+  final AudioPlayer _player = AudioPlayer();
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    getCurrentTrack();
+    initAudioPlayer();
+  }
+
+  Future<void> initAudioPlayer() async {
+    try {
+      await _player.setUrl('https://listen.radioking.com/radio/242578/radio');
+      _player.play();
+    } catch (e) {
+      print("Erreur lors de la lecture de la radio: $e");
+    }
+  }
+
+  Future<void> getCurrentTrack() async {
+    final response = await http.get(Uri.parse(apiUrl));
+
+    if (response.statusCode == 200) {
+      setState(() {
+        currentTrack = jsonDecode(response.body);
+      });
+
+      // Redémarre le Timer pour actualiser les données après la durée de la piste en cours
+      _timer?.cancel();
+      _timer = Timer(
+          Duration(seconds: (currentTrack!['duration'] as num).ceil()),
+          getCurrentTrack);
+    } else {
+      throw Exception('Erreur lors de la récupération des données de la radio');
+    }
+  }
+
+  @override
+  void dispose() {
+    // Libère les ressources du lecteur audio et annule le Timer
+    _player.dispose();
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Radio en ligne'),
+        ),
+        body: Center(
+        child: currentTrack == null
+        ? const CircularProgressIndicator()
+        : Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+    Text(
+    '${currentTrack!['artist']} - ${currentTrack!['title']}',
+    style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    ),
+    const SizedBox(height: 20),
+    currentTrack!['cover'] != null
+    ? Image.network(currentTrack!['cover'])
+        : const Text('Pas de couverture disponible'),
+    const SizedBox(height: 20),
+    const Text(
+    'Lecture en cours...',
+      style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic),
+    ),
+      const SizedBox(height: 20),
+      StreamBuilder<Duration>(
+        stream: _player.positionStream,
+        builder: (context, snapshot) {
+          final position = snapshot.data?.inSeconds ?? 0;
+          return Text(
+            'Position: ${position} s',
+            style: TextStyle(fontSize: 18),
+          );
+        },
+      ),
+    ],
+        ),
+        ),
+    );
+  }
+}
